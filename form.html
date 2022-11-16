@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Db Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous"
+  />
+</head>
+<style>
+    body{
+        font-family: 'Signika Negative', sans-serif;
+        background-color: #777777;
+        margin: 0;
+    }
+    form{  
+    display:block;
+    margin:0 auto;
+}
+button{
+  margin-left: 75px;
+}
+
+</style>
+<body>
+    <div class="text-center"><h1>Enter Anime</h1>
+        <span>Below enter your favorite anime's information to be saved :)</span>
+    </div>
+    
+    <form  class = "card col-6 bg-dark text-white" method="POST" action = '/form'>
+        <div class=" card-body py-5 md-form text-start">
+        <span>Title</span>
+        <br>
+       <input name="name" placeholder="Enter title...">
+       <br>
+       <span>Anime Description</span>
+       <br>
+       <textarea name="desc"  type ="text" rows = "5" cols="40" placeholder="Enter Description...."></textarea>
+       <br>
+       <label>Rate 1-10</label>
+       <br>
+       <input name="rating"  type="number" max="10" min="1" step="1" placeholder="Rate">
+       <br>
+       <span># of Episodes</span>
+       <br>
+       <input name="episode" type="number" placeholder="Number of episodes: ">
+       <br>
+       <label>Category</label>
+       <br>
+       <select name="Category" id="Category">
+        <option value="Kodomuke">Kodomuke</option>
+        <option value="Shounen/Shonen">Shounen/Shonen</option>
+        <option value="Josei">Josei</option>
+        <option value="Seinen">Seinen</option>
+        <option value="Shojo/Shoujo">Shojo/Shoujo</option>
+      </select>
+      <br>
+       <span>Studio Name</span>
+       <br>
+       <input name="studio" placeholder="Enter studio...">
+       <br>
+       <br>
+       <label>Upload image</label>
+       <br>
+       <input placeholder="upload image" type="file">
+       <br>
+       <br>
+       <a href="/">
+        <button class="btn btn-secondary btn-lg w-75"type="submit" >Submit</button>
+     </a>
+    </div>
+    </form>
+    
+        
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
